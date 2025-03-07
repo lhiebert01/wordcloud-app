@@ -1,0 +1,8 @@
+requests>=2.25.1
+nltk>=3.6.2
+tqdm>=4.61.0
+matplotlib>=3.5.0
+flask>=2.0.1
+wordcloud>=1.8.1
+PyPDF2>=2.0.0
+python-docx>=0.8.11
