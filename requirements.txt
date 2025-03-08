@@ -6,3 +6,5 @@ flask>=2.0.1
 wordcloud>=1.8.1
 PyPDF2>=2.0.0
 python-docx>=0.8.11
+streamlit>=1.30.0
+pandas>=2.0.0
