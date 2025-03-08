@@ -27,7 +27,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Add custom CSS for scrollable areas
+# Add custom CSS for scrollable areas and styling
 st.markdown("""
 <style>
 .scrollable-container {
@@ -40,12 +40,46 @@ st.markdown("""
     font-family: monospace;
     white-space: pre-wrap;
 }
+
+.app-header {
+    color: #4527A0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-subheader {
+    color: #5E35B1;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.linkedin-link {
+    color: #0077B5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkedin-link:hover {
+    text-decoration: underline;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# Title and description
-st.title("Wikipedia Word Cloud Visualizer")
-st.write("Analyze word frequencies from Wikipedia categories and visualize them as word clouds")
+# Title and description with emojis and styling
+st.markdown('<div class="app-header">🚀 ✨ Wikipedia Word Cloud Visualizer ✨ 🚀</div>', unsafe_allow_html=True)
+st.markdown('<div class="app-subheader">Analyze word frequencies from Wikipedia categories and visualize them as beautiful word clouds</div>', unsafe_allow_html=True)
 
 # Sidebar for inputs
 with st.sidebar:
@@ -66,8 +100,8 @@ with st.sidebar:
     
     # Example categories
     st.subheader("Example Categories")
-    example_categories = ["Large_language_models", "American_silversmiths", "Decorative_arts", 
-                         "Machine_learning", "Artificial_intelligence"]
+    example_categories = ["Large_language_models", "Word_of_the_year", "Periodic_table", 
+                         "Artificial_intelligence"]
     
     for example in example_categories:
         if st.button(example, key=f"example_{example}"):
@@ -285,3 +319,11 @@ else:
     
     # Show example categories
     st.write("Try one of the example categories from the sidebar to get started!")
+
+# Footer with LinkedIn link
+st.markdown("""
+<div class="app-footer">
+    ✨ Developed by <a href="https://www.linkedin.com/in/lindsayhiebert/" target="_blank" class="linkedin-link">Lindsay Hiebert</a> ✨<br>
+    GenAI & Cybersecurity Expert | 2025
+</div>
+""", unsafe_allow_html=True)
