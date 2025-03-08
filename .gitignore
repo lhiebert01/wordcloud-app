@@ -12,6 +12,7 @@ build/
 venv/
 env/
 ENV/
+.venv/
 
 # IDE specific files
 .idea/
@@ -24,12 +25,27 @@ cache/
 *.cache
 *_wordcloud.png
 *_word_frequency.txt
+*_article_statistics.txt
+*_summary.md
+*_summary.docx
 
 # Environment variables
 .env
+.streamlit/secrets.toml
 
 # Flask session files
 flask_session/
 
 # Logs
 *.log
+
+# Streamlit specific
+.streamlit/watch.lock
+.streamlit/watch.json
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# OS specific
+.DS_Store
+Thumbs.db
